@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="286dp"
+        android:layout_height="67dp"
+        android:text="SYMPHONY"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/PlaylistButton"
+        android:layout_width="235dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="18dp"
+        android:text="add to playlist"
+        app:layout_constraintBottom_toTopOf="@+id/ResetButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NextButton" />
+
+    <Button
+        android:id="@+id/ResetButton"
+        android:layout_width="83dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="16dp"
+        android:text="reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlaylistButton" />
+
+    <EditText
+        android:id="@+id/SongTitleText"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter Song Title"
+        app:layout_constraintBottom_toTopOf="@+id/ArtistsNameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/ArtistsNameText"
+        android:layout_width="304dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter Artists Name"
+        app:layout_constraintBottom_toTopOf="@+id/RatingText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SongTitleText" />
+
+    <EditText
+        android:id="@+id/RatingText"
+        android:layout_width="298dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="27dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter the Rating"
+        app:layout_constraintBottom_toTopOf="@+id/CommentsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ArtistsNameText" />
+
+    <EditText
+        android:id="@+id/CommentsText"
+        android:layout_width="297dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="116dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter the Comments"
+        app:layout_constraintBottom_toTopOf="@+id/PlaylistButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RatingText" />
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="245dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="17dp"
+        android:text="Next"
+        app:layout_constraintBottom_toTopOf="@+id/PlaylistButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CommentsText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
