@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        (playlist).setOnClickListener {
+        this.playlist.setOnClickListener {
             val SongTitle = SongTitleText.text.toString().trim()
             val ArtistsName = ArtistsNameText.text.toString().trim()
             val Rating = RatingText.text.toString().trim()
