@@ -1,6 +1,7 @@
 package vcmsa.ci.practicum_10470447
 
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -12,25 +13,30 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    fun main {
 
-    }
-
-
+    private val playlist = mutableListOf<String>()
+    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        supportActionBar? = "SYMPHONY"
+        // initialize views
+        var SongTitleText = findViewById(R.id.SongTitleText)
+        var ArtistsNameText = findViewById(R.id.ArtistsNameText)
+        var RatingText = findViewById(R.id.RatingText)
+        var CommentsText = findViewById(R.id.CommentsText)
+        var NextButton = findViewById(R.id.NextButton)
+        var playlist = findViewById(R.id.PlaylistButton)
 
-        // initialising the variables
+
+        // declaring  the variables
         var songTitle = findViewById<EditText>(R.id.SongTitleText)
         var artistsName = findViewById<EditText>(R.id.ArtistsNameText)
         var rating = findViewById<EditText>(R.id.RatingText)
         var comments = findViewById<EditText>(R.id.CommentsText)
         var next = findViewById<Button>(R.id.NextButton)
-        var reset = findViewById<Button>(R.id.ResetButton)
+        var Exit = findViewById<Button>(R.id.ExitButton)
         var playlist = findViewById<Button>(R.id.PlaylistButton)
 
 
@@ -53,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             "")
 
 
-val btn = findViewById<Button>(R.id.PlaylistButton)
+        val Btn = findViewById<Button>(R.id.PlaylistButton)
         btn.setOnClickListener {
             Toast.makeText(this,"ENTER THE DETAILS FOR THE PLAYLIST", Toast.LENGTH_SHORT).show()
 
@@ -63,15 +69,23 @@ val btn = findViewById<Button>(R.id.PlaylistButton)
 
 
 
-        val btn = findViewById<Button>(R.id.NextButton)
+        val Btn= findViewById<Button>(R.id.NextButton)
         btn.setOnClickListener {
-            Toast.makeText(this,"Clicked", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+            playlistButton.setOnClickListener {
+                val SongTitle = SongTitleText.text.toString().trim()
+                val ArtistsName = ArtistsNameText.text.toString().trim()
+                val Rating = RatingText.text.toString().trim()
+                val Comments = CommentsText.text.toString().trim()
+
+
+        }           }
+        va playlistButton = null
+        playlistButton.setOnClickListener {
+            val SongTitleText = .text.toString().trim()
+            val ArtistsNameText = ArtistsNameText.text.toString().trim()
+            val RatingText = RatingText.text.toString().trim()
         }
-    }
-}
